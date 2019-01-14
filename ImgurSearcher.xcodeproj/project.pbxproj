@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		18557D2221EAAFDC00AB4528 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18557D2121EAAFDC00AB4528 /* AppDelegate.swift */; };
-		18557D2421EAAFDC00AB4528 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18557D2321EAAFDC00AB4528 /* ViewController.swift */; };
+		18557D2421EAAFDC00AB4528 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18557D2321EAAFDC00AB4528 /* SearchViewController.swift */; };
 		18557D2721EAAFDC00AB4528 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18557D2521EAAFDC00AB4528 /* Main.storyboard */; };
 		18557D2921EAAFDE00AB4528 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18557D2821EAAFDE00AB4528 /* Assets.xcassets */; };
 		18557D2C21EAAFDE00AB4528 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18557D2A21EAAFDE00AB4528 /* LaunchScreen.storyboard */; };
+		189BE11A21EBF2BA002D6C10 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189BE11921EBF2BA002D6C10 /* Results.swift */; };
+		189BE11D21EBFAC1002D6C10 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189BE11C21EBFAC1002D6C10 /* CustomImageView.swift */; };
+		18A9320021EAC1660054477F /* NetworkingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A931FF21EAC1660054477F /* NetworkingClient.swift */; };
+		18F12C5521ED295C0086F71B /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F12C5421ED295C0086F71B /* detailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		18557D1E21EAAFDC00AB4528 /* ImgurSearcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImgurSearcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18557D2121EAAFDC00AB4528 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		18557D2321EAAFDC00AB4528 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		18557D2321EAAFDC00AB4528 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		18557D2621EAAFDC00AB4528 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18557D2821EAAFDE00AB4528 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18557D2B21EAAFDE00AB4528 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18557D2D21EAAFDE00AB4528 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		189BE11921EBF2BA002D6C10 /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
+		189BE11C21EBFAC1002D6C10 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		18A931FF21EAC1660054477F /* NetworkingClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingClient.swift; sourceTree = "<group>"; };
+		18F12C5421ED295C0086F71B /* detailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +63,33 @@
 			isa = PBXGroup;
 			children = (
 				18557D2121EAAFDC00AB4528 /* AppDelegate.swift */,
-				18557D2321EAAFDC00AB4528 /* ViewController.swift */,
+				18A931FE21EAB25B0054477F /* ViewControllers */,
 				18557D2521EAAFDC00AB4528 /* Main.storyboard */,
 				18557D2821EAAFDE00AB4528 /* Assets.xcassets */,
 				18557D2A21EAAFDE00AB4528 /* LaunchScreen.storyboard */,
 				18557D2D21EAAFDE00AB4528 /* Info.plist */,
+				18A931FF21EAC1660054477F /* NetworkingClient.swift */,
+				189BE11C21EBFAC1002D6C10 /* CustomImageView.swift */,
+				189BE11B21EBF40F002D6C10 /* Model */,
 			);
 			path = ImgurSearcher;
+			sourceTree = "<group>";
+		};
+		189BE11B21EBF40F002D6C10 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				189BE11921EBF2BA002D6C10 /* Results.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		18A931FE21EAB25B0054477F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				18557D2321EAAFDC00AB4528 /* SearchViewController.swift */,
+				18F12C5421ED295C0086F71B /* detailViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +163,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18557D2421EAAFDC00AB4528 /* ViewController.swift in Sources */,
+				189BE11D21EBFAC1002D6C10 /* CustomImageView.swift in Sources */,
+				189BE11A21EBF2BA002D6C10 /* Results.swift in Sources */,
+				18557D2421EAAFDC00AB4528 /* SearchViewController.swift in Sources */,
+				18A9320021EAC1660054477F /* NetworkingClient.swift in Sources */,
 				18557D2221EAAFDC00AB4528 /* AppDelegate.swift in Sources */,
+				18F12C5521ED295C0086F71B /* detailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +315,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PE9MW7PNB5;
 				INFOPLIST_FILE = ImgurSearcher/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +334,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PE9MW7PNB5;
 				INFOPLIST_FILE = ImgurSearcher/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

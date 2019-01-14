@@ -1,24 +1,152 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M9b-z4-vIB">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Imgur Searcher-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SearchViewController" customModule="ImgurSearcher" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1rl-w2-b85">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <color key="sectionIndexBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="15" reuseIdentifier="parentCellIdentifier" rowHeight="300" id="Q76-gd-nkv">
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="300"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Q76-gd-nkv" id="VgZ-pW-ewb">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolder" translatesAutoresizingMaskIntoConstraints="NO" id="d9i-4e-rZr" customClass="CustomImageView" customModule="ImgurSearcher" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PlQ-Cu-lKY">
+                                                    <rect key="frame" x="10" y="250" width="404" height="50"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="51r-ym-2qB"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="PlQ-Cu-lKY" secondAttribute="trailing" id="Dze-Tp-c6s"/>
+                                                <constraint firstAttribute="trailing" secondItem="d9i-4e-rZr" secondAttribute="trailing" id="FFF-3S-GUO"/>
+                                                <constraint firstItem="d9i-4e-rZr" firstAttribute="top" secondItem="VgZ-pW-ewb" secondAttribute="top" id="XcX-Ah-5cF"/>
+                                                <constraint firstItem="PlQ-Cu-lKY" firstAttribute="leading" secondItem="VgZ-pW-ewb" secondAttribute="leading" constant="10" id="fVW-EC-42t"/>
+                                                <constraint firstItem="PlQ-Cu-lKY" firstAttribute="top" secondItem="d9i-4e-rZr" secondAttribute="bottom" id="ufk-cT-5ru"/>
+                                                <constraint firstItem="d9i-4e-rZr" firstAttribute="leading" secondItem="VgZ-pW-ewb" secondAttribute="leading" id="whE-wG-F38"/>
+                                                <constraint firstAttribute="bottom" secondItem="PlQ-Cu-lKY" secondAttribute="bottom" id="yI9-xy-XBH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <segue destination="fcI-Ow-ZOp" kind="show" identifier="detailVC" id="Rbo-Yn-Y2m"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="QgG-qL-keR"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="QvI-cI-dqL"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1rl-w2-b85" secondAttribute="bottom" id="4VQ-8K-cTX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1rl-w2-b85" secondAttribute="trailing" id="a4X-M7-yVp"/>
+                            <constraint firstItem="1rl-w2-b85" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aZl-ss-k9O"/>
+                            <constraint firstItem="1rl-w2-b85" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jDp-ZR-U5b"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Imgur Searcher" id="5LZ-Ve-igQ"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="Z0X-eh-j5l" id="3Mz-Lh-1nh"/>
+                        <outlet property="tableView" destination="1rl-w2-b85" id="w2r-DW-ajp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="Z0X-eh-j5l">
+                    <connections>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="4Pf-nl-dpW"/>
+                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="iVc-5l-fla"/>
+                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="Cv9-PD-Frw"/>
+                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="W0y-72-CZa"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
+            <point key="canvasLocation" x="966.66666666666674" y="26.116071428571427"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="HgC-bA-Osc">
+            <objects>
+                <viewController id="fcI-Ow-ZOp" customClass="detailViewController" customModule="ImgurSearcher" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xjO-v3-35A">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolder" translatesAutoresizingMaskIntoConstraints="NO" id="j6f-hO-UsG" customClass="CustomImageView" customModule="ImgurSearcher" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="318" width="414" height="260"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="260" id="Zi6-Pi-rio"/>
+                                    <constraint firstAttribute="width" constant="414" id="eWU-Vl-TG7"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="j6f-hO-UsG" firstAttribute="centerX" secondItem="xjO-v3-35A" secondAttribute="centerX" id="E4p-q0-p7i"/>
+                            <constraint firstItem="j6f-hO-UsG" firstAttribute="centerY" secondItem="xjO-v3-35A" secondAttribute="centerY" id="Ee7-Kg-3aa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="llI-q7-ZEr"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="j6f-hO-UsG" id="rW3-5j-G8f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="phA-bx-HoS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1731.8840579710147" y="25.446428571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ge0-JO-JbY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="M9b-z4-vIB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZLo-V8-HgS">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dtb-XA-vw7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fKK-jo-nXr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="56.521739130434788" y="26.116071428571427"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="placeHolder" width="394" height="260"/>
+    </resources>
 </document>
